@@ -301,18 +301,6 @@ public class DetailsActivity extends AppCompatActivity {
                                 startActivity(intent);
                             }
                         });
-                        builder.setNegativeButton(R.string.email, new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog, int id) {
-                                Intent intent = new Intent(android.content.Intent.ACTION_SENDTO);
-                                intent.setType("text/plain");
-                                intent.setData(Uri.parse("Send:" + supplierEmailEdit.getText().toString().trim()));
-                                intent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Recurring new order");
-                                String bodyMessage = "Send additional ASAP " +
-                                        nameEdit.getText().toString().trim() + "!";
-                                intent.putExtra(android.content.Intent.EXTRA_TEXT, bodyMessage);
-                                startActivity(intent);
-                            }
-                        });
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
                     }
