@@ -295,6 +295,8 @@ public class DetailsActivity extends AppCompatActivity {
                         builder.setPositiveButton(R.string.phone, new DialogInterface.OnClickListener(){
                             public void onClick(DialogInterface dialog, int id){
                                 Intent intent = new Intent(Intent.ACTION_DIAL);
+                                if (intent.resolveActivity(getPackageManager()) != null){
+                                    startActivity(intent);
                                 intent.setData(Uri.parse("PHONE:" + supplierPhoneEdit.getText().toString().trim()));
                                 startActivity(intent);
                             }
