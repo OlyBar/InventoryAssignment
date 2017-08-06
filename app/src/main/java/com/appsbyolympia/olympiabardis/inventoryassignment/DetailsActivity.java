@@ -95,7 +95,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         imageBtn.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View view){
+            public void onClick(View v){
                 tryToOpenImageSelector();
                 infoItemHasChanged = true;
             }
