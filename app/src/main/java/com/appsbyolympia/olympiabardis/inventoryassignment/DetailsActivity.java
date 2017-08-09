@@ -297,6 +297,7 @@ public class DetailsActivity extends AppCompatActivity {
                                 Intent intent = new Intent(Intent.ACTION_DIAL);
                                 if (intent.resolveActivity(getPackageManager()) != null){
                                     startActivity(intent);
+                                }
                                 intent.setData(Uri.parse("PHONE:" + supplierPhoneEdit.getText().toString().trim()));
                                 startActivity(intent);
                             }
